@@ -47,10 +47,3 @@ for st_id, name in STATIONS.items():
         fig.add_hline(y=0.8, line_dash="dot", line_color="red", annotation_text="Flood Threshold")
         fig.update_layout(template="plotly_dark", height=400, margin=dict(l=20, r=20, t=20, b=20))
         st.plotly_chart(fig, use_container_width=True)
-
-if st.button('Force Data Refresh'):
-    st.cache_data.clear()
-    if hasattr(st, "rerun"):
-        st.rerun()
-    else:
-        st.experimental_rerun()
