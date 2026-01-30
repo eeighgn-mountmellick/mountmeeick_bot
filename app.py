@@ -22,9 +22,9 @@ st.title("🌊 Pound river, Mountmellick Dashboard")
 
 for st_id, name in STATIONS.items():
     
-# Get the directory the script is in
-curr_dir = os.path.dirname(os.path.abspath(__file__))
-file_path = os.path.join(curr_dir, f"history_{st_id}_0001.csv")
+    # Get the directory the script is in
+    curr_dir = os.path.dirname(os.path.abspath(__file__))
+    file_path = os.path.join(curr_dir, f"history_{st_id}_0001.csv")
 
 if os.path.exists(file_path):
     df = pd.read_csv(file_path)
