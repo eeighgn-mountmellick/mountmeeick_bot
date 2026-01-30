@@ -1,4 +1,4 @@
-This bot accesses Met Eireann precipitation and temperature data for the two Mountmellick sensors and overlays them to generate a rate change anf flood warning if the rate change is over 0.5m per hour.
+This bot accesses Met Eireann precipitation and temperature data for the two Mountmellick sensors and overlays them to generate a rate change and flood warning if the rate change is over 0.5m per hour.
 
 This bot “Contains Irish Public Sector Information licensed under a Creative Commons Attribution 4.0 International (CC BY 4.0) licence”
 
