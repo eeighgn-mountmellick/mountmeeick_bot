@@ -25,6 +25,8 @@ for st_id, name in STATIONS.items():
     if os.path.exists(file):
         df = pd.read_csv(file)
         df['datetime'] = pd.to_datetime(df['datetime'])
+        df['value'] = pd.to_numeric(df['value'], errors='coerce') # Converts text to numbers
+        df = df.dropna(subset=['value']) # Removes any empty or broken rows
         latest = df.iloc[-1]
         rate = latest['value'] - df.iloc[-5]['value'] if len(df) > 4 else 0
         
