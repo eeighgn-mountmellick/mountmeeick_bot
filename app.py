@@ -50,4 +50,7 @@ for st_id, name in STATIONS.items():
 
 if st.button('Force Data Refresh'):
     st.cache_data.clear()
-    st.rerun()
+    if hasattr(st, "rerun"):
+        st.rerun()
+    else:
+        st.experimental_rerun()
