@@ -1,3 +1,14 @@
+import sys
+
+# Workaround for the removed imghdr module in Python 3.13+
+try:
+    import imghdr
+except ImportError:
+    import types
+    m = types.ModuleType("imghdr")
+    m.what = lambda filename, h=None: None  # Simple dummy function
+    sys.modules["imghdr"] = m
+
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
